@@ -1,0 +1,715 @@
+/* Estilos globais e do cabeçalho */
+* {
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total dos elementos */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    overflow-x: hidden; /* Remove a barra de rolagem horizontal */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute; /* Torna o header flutuante para sobrepor a imagem de fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Garante que o menu fique sobre a imagem */
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(2, 163, 21);
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    
+}
+
+.menu li a:hover {
+    background-color: #00210e;
+    border-radius: 5px;
+}
+
+.menu-hamburguer {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-hamburguer span {
+    background-color: rgb(2, 163, 21);
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+/* Estilos da seção hero */
+.hero {
+    display: flex;
+    align-items: flex-start; /* Alinha os conteúdos ao topo e à esquerda */
+    justify-content: flex-start; /* Alinha os conteúdos à esquerda */
+    height: 90vh;
+    background: url('../img/CAPA01.jpg') no-repeat center center/cover;
+    text-align: left;
+    padding: 1px;
+    flex-direction: column;
+    position: relative;
+    width: 100vw; /* Garante que a largura ocupe toda a tela */
+    overflow: hidden; /* Impede o overflow do conteúdo */
+}
+
+.hero-content {
+    max-width: 600px;
+    text-align: left; 
+    margin-top: 100px; 
+}
+span{
+    color: rgb(2, 163, 21);
+}
+
+.hero h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.botao-contato {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgb(2, 163, 21);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-bottom: 30px; /* Espaçamento abaixo do botão */
+}
+
+.botao-contato:hover {
+    background-color: #00210e;
+}
+
+/* Estilos da área de contato */
+.contact-info {
+    display: flex;
+    justify-content: flex-start; /* Alinha os contatos à esquerda */
+    /* background-color: rgba(0, 0, 0, 0.6);  */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Ocupa toda a largura */
+    max-width: 800px; /* Tamanho máximo */
+    gap: 50px; /* Espaçamento entre os blocos de contato */
+    flex-direction: row; /* Organiza os contatos em linha */
+    position: absolute; /* Posiciona a área de contato sobre a imagem */
+    bottom: 60px; /* Distância do fundo, ajustável conforme necessário */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta a centralização */
+}
+
+/* Estilos dos itens de contato */
+.contact-info div {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        flex-direction: column;
+        background-color: #111;
+        width: 200px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 15px;
+    }
+
+    .menu-hamburguer {
+        display: flex;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+    /* Ajustes da imagem de fundo para telas pequenas */
+@media (max-width: 768px) {
+    .hero {
+        background-position: center center; /* Garante que a imagem esteja centralizada */
+        background-size: cover; /* Mantém a imagem cobrindo toda a área */
+        height: auto; /* Deixa a altura da hero flexível em relação ao conteúdo */
+        padding: 20px; /* Reduz o padding para ajustar melhor em telas menores */
+    }
+
+    .hero-content {
+        margin-top: 50px; /* Diminui o espaçamento superior em telas menores */
+    }
+
+    .botao-contato {
+        margin-bottom: 20px; /* Reduz o espaço abaixo do botão */
+    }
+}
+
+
+
+}
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Dados sobre mim::::::Dados sobre mim::::::Dados sobre mim::::::Dados sobre mim::::::*/
+#sobre-mim {
+    padding: 50px;
+    background-color: #000000;
+    color: white;
+}
+
+h2 {
+    color: rgb(2, 163, 21);
+}
+
+.container-sobre-mim {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.foto-perfil img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #00210e;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.foto-perfil img:hover {
+    transform: scale(1.1); /*aumeto da imagem ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(32, 188, 4, 0.656); 
+}
+
+.conteudo-sobre-mim {
+    max-width: 600px;
+}
+
+.conteudo-sobre-mim h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.conteudo-sobre-mim p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.dados-pessoais {
+    display: flex;
+    gap: 50px;
+}
+
+.dados-pessoais p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.botao-curriculo {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgb(2, 163, 21);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-curriculo:hover {
+    background-color: #00210e;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-sobre-mim {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudo-sobre-mim {
+        max-width: 100%; /* Garantir que o conteúdo ocupe toda a largura em telas pequenas */
+    }
+
+    .dados-pessoais {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .foto-perfil img {
+        width: 200px; 
+        height: 200px;
+    }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Minhas habilidades...Minhas habilidades...Minhas habilidades...*/
+/* Seção de habilidades */
+#habilidades {
+    padding: 50px 20px; /* Espaçamento interno */
+    background-color: #111; /* Cor de fundo que combina com o projeto */
+    color: white; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+#habilidades h2 {
+    font-size: 36px;
+    color: rgb(2, 163, 21); /* Cor verde como destaque */
+    margin-bottom: 40px; /* Espaçamento inferior */
+}
+
+/* Container para os cards de habilidades */
+.container-habilidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas por linha */
+    gap: 30px; /* Espaçamento entre os cards */
+    justify-items: center; /* Centraliza os cards dentro de cada coluna */
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a grade na página */
+}
+
+/* Estilos dos cards individuais */
+.card-habilidade {
+    background-color: #1e1e1e; /* Cor de fundo do card */
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%; /* Largura total para se adaptar ao grid */
+    max-width: 300px; /* Largura máxima dos cards */
+    text-align: center; /* Centraliza o conteúdo do card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para hover */
+    cursor: pointer;
+}
+
+.card-habilidade:hover {
+    transform: translateY(-10px); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Sombra verde */
+}
+
+/* Ícones dentro dos cards de habilidade */
+.icon-habilidade {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px; /* Centraliza o ícone */
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: girar 5s linear infinite; /* Animação de rotação contínua */
+}
+
+/* Animação de rotação contínua */
+@keyframes girar {
+    0% {
+        transform: rotate(0deg); /* Posição inicial */
+    }
+    100% {
+        transform: rotate(360deg); /* Gira 360 graus */
+    }
+}
+
+/* Ícones para habilidades */
+#html {
+    background-image: url('../img/htm.png'); /* Ícone de HTML */
+}
+
+#css {
+    background-image: url('../img/CSS.png'); /* Ícone de CSS */
+}
+
+#javascript {
+    background-image: url('../img/JavaS.png'); /* Ícone de JavaScript */
+}
+
+#php {
+    background-image: url('../img/PHP.png'); /* Ícone de PHP */
+}
+
+#mysql {
+    background-image: url('../img/Mys.png'); /* Ícone de MySQL */
+}
+
+#react {
+    background-image: url('../img/REACT.png'); /* Ícone de React */
+}
+
+/* Cards de habilidades em aprendizado */
+.card-habilidade-aprendizado {
+    background-color: #2e2e2e; /* Cor diferenciada para indicar aprendizado */
+    border: 2px dashed rgb(2, 163, 21); /* Borda especial */
+}
+
+.card-habilidade-aprendizado:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 255, 0, 0.6); /* Sombra amarela */
+}
+
+/* Ícones para habilidades em aprendizado */
+#node {
+    background-image: url('../img/NODE.png'); /* Ícone de Node.js */
+}
+
+#docker {
+    background-image: url('../img/ANGULAR.png'); /* Ícone de Docker */
+}
+
+#aws {
+    background-image: url('../img/PYTHON.png'); /* Ícone de AWS */
+}
+
+/* Responsividade para habilidades */
+@media (max-width: 768px) {
+    .container-habilidades {
+        grid-template-columns: 1fr; /* Em telas pequenas, exibe uma coluna */
+        gap: 20px; /* Reduz o espaçamento em telas menores */
+    }
+
+    .card-habilidade {
+        max-width: 100%; /* O card ocupa toda a largura disponível */
+    }
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*Meus trabalhos...Meus trabalhos...Meus trabalhos...Meus trabalhos...Meus trabalhos...Meus trabalhos...*/
+/* Seção de trabalhos */
+#trabalhos {
+    padding: 50px 20px;
+    background-color: #111; /* Fundo escuro para combinar com o resto do site */
+    color: white;
+    text-align: center;
+}
+
+#trabalhos h2 {
+    font-size: 36px;
+    color: rgb(2, 163, 21); /* Cor verde */
+    margin-bottom: 40px;
+}
+
+/* Container dos cards de trabalhos */
+.container-trabalhos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+    gap: 30px; /* Espaçamento entre os cards */
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção na página */
+}
+
+/* Estilos dos cards individuais */
+.card-trabalho {
+    background-color: #1e1e1e; /* Fundo dos cards */
+    border-radius: 10px;
+    overflow: hidden; /* Para garantir que a imagem fique contida no card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição no hover */
+}
+
+.card-trabalho:hover {
+    transform: translateY(-10px); /* Eleva o card ao passar o mouse */
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6); /* Sombra verde suave */
+}
+
+/* Imagem no topo dos cards */
+.card-imagem {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* IDs únicos para as imagens dos projetos */
+#projeto1 {
+    background-image: url('../img/Telmo.PNG'); /* Substitua pelo caminho da imagem do projeto */
+}
+
+#projeto2 {
+    background-image: url('../img/Portf.PNG');
+}
+
+#projeto3 {
+    background-image: url('../img/AIBISFLIX.PNG');
+}
+
+#projeto4 {
+    background-image: url('path/to/project4-image.jpg');
+}
+
+/* Conteúdo dos cards */
+.card-conteudo {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-conteudo h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(2, 163, 21); /* Título verde */
+}
+
+.card-conteudo p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white; /* Texto branco */
+}
+
+/* Botão de ver mais detalhes */
+.botao-detalhes {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(2, 163, 21); /* Cor verde para o botão */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao-detalhes:hover {
+    background-color: #00210e; /* Cor mais escura no hover */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-trabalhos {
+        grid-template-columns: 1fr; /* Exibe uma coluna em telas pequenas */
+    }
+}
+/*---------------------------------------------------------------------------------------------------*/
+/*Area relacionada a casos de estudos que eu estou a trabalhar*/
+#casos-estudo {
+    padding: 50px;
+    background-color: #111;
+    color: white;
+    text-align: center;
+}
+
+#casos-estudo h2 {
+    color: rgb(2, 163, 21);
+    margin-bottom: 30px;
+    font-size: 36px;
+}
+
+.estudos-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-estudo {
+    background-color: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-estudo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(32, 188, 4, 0.656);
+}
+
+.card-estudo img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card-estudo h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: rgb(2, 163, 21);
+}
+
+.card-estudo p {
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.btn-ver-mais {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(2, 163, 21);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-ver-mais:hover {
+    background-color: #00210e;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .estudos-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-estudo {
+        margin-bottom: 20px;
+    }
+}
+/*---------------------------------------------------------------------------------------------------*/
+/* Seção de Contato */
+#contato {
+    padding: 50px;
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contato-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.texto-contato h2 {
+    color: rgb(2, 163, 21);
+    font-size: 28px;
+}
+
+.texto-contato p {
+    font-size: 18px;
+    margin-top: 10px;
+    max-width: 400px;
+}
+
+.botao-contato {
+    text-align: right;
+}
+
+.btn-animado {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: rgb(2, 163, 21);
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.btn-animado:hover {
+    background-color: #00210e;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgb(2, 163, 21), 0 0 30px rgba(2, 163, 21, 0.7), 0 0 40px rgba(2, 163, 21, 0.4);
+}
+
+.btn-animado::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: rgba(2, 163, 21, 0.2);
+    z-index: -1;
+    transition: transform 0.5s ease;
+    transform: scale(0.9);
+}
+
+.btn-animado:hover::before {
+    transform: scale(1.3);
+}
+
+/* Rodapé */
+#rodape {
+    padding: 20px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+}
+
+#rodape p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #contato {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contato-conteudo {
+        flex-direction: column;
+    }
+
+    .texto-contato {
+        margin-bottom: 20px;
+    }
+
+    .botao-contato {
+        text-align: center;
+    }
+}
